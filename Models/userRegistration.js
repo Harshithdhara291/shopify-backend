@@ -13,7 +13,11 @@ const userModel = new mongoose.Schema({
     password:{
         type:String,
         trim:true
-    }
+    },
+    myCart:[{
+        type:mongoose.Types.ObjectId,
+        ref:"product"
+    }]
 })
 
 const connectUser = new mongoose.model("users list",userModel);
